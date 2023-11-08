@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import *
 
 class BarbeiroAdmin(admin.ModelAdmin):
-    list_display = ("nome",)
+    list_display = ("nome","sobrenome")
 
 class ServicoAdmin(admin.ModelAdmin):
     list_display = ("titulo","preco")

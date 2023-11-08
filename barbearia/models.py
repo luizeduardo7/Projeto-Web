@@ -1,11 +1,16 @@
 from django.db import models
-from usuarios.models import Usuario
 
 
 class Barbeiro(models.Model):
     nome = models.CharField(max_length=30)
+    sobrenome = models.CharField(max_length=30)
+    
+    def __str__(self):
+        return f"{self.nome} {self.sobrenome}"
 
 class Servico(models.Model):
     titulo = models.CharField(max_length=30)
     preco = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self):
+        return self.titulo
 
