@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Usuario(models.Model):
+    nome = models.CharField(max_length=30)
+    email = models.CharField(max_length=30)
+    telefone = models.CharField(max_length=9)
+    senha = models.CharField(max_length=10)

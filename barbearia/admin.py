@@ -1,11 +1,12 @@
 from django.contrib import admin
 from .models import *
 
-class UsuarioAdmin(admin.ModelAdmin):
-    list_display = ("nome", "email")
+class BarbeiroAdmin(admin.ModelAdmin):
+    list_display = ("nome",)
 
+class ServicoAdmin(admin.ModelAdmin):
+    list_display = ("titulo","preco")
 
-admin.site.register(Usuario, UsuarioAdmin)
-admin.site.register(Barbeiro)
-admin.site.register(Servico)
-admin.site.register(Agenda)
+admin.site.register(Barbeiro,BarbeiroAdmin)
+admin.site.register(Servico,ServicoAdmin)
+

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'barbearia',
     'usuarios',
+    'agenda',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,11 @@ TEMPLATES = [
         },
     },
 ]
+
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+# ]
+
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
